@@ -104,6 +104,10 @@
 	opacity: 0;
 	will-change: transform, opacity;
 }
+.gallery__item-view {
+	font-style: italic;
+	font-weight: 100;
+}
 
 @media screen and (min-width: 53em) {
 	.gallery__item {

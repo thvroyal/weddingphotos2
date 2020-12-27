@@ -31,8 +31,8 @@ function showPhotos() {
                 <figcaption class="gallery__item-caption">
                     <h2 class="gallery__item-title" data-scroll data-scroll-speed="2" data-splitting></h2>
                     <span class="gallery__item-number">${convertNumber(index)}</span>
-                    <p class="gallery__item-text">Amalia Lynn</p>
-                    <p class="gallery__item-text">1988</p>
+                    <p class="gallery__item-text"><a href="${image.link}" target="_blank"><i class="fas fa-cloud-download-alt"></i>  Download</a></p>
+                    <p class="gallery__item-text gallery__item-view">${image.views} views</p>
                 </figcaption>
             </figure>`;
                 gallery.insertAdjacentHTML('beforeend', element);

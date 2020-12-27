@@ -11020,7 +11020,7 @@ function showPhotos() {
     var images = data.data.images; // print node image on HTML
 
     images ? images.map(function (image, index) {
-      var element = "<figure class=\"gallery__item\">\n                <div class=\"gallery__item-img\"><div class=\"gallery__item-imginner\" style=\"background-image: url(".concat(image.link, ")\"></div></div>\n                <figcaption class=\"gallery__item-caption\">\n                    <h2 class=\"gallery__item-title\" data-scroll data-scroll-speed=\"2\" data-splitting></h2>\n                    <span class=\"gallery__item-number\">").concat(convertNumber(index), "</span>\n                    <p class=\"gallery__item-text\">Amalia Lynn</p>\n                    <p class=\"gallery__item-text\">1988</p>\n                </figcaption>\n            </figure>");
+      var element = "<figure class=\"gallery__item\">\n                <div class=\"gallery__item-img\"><div class=\"gallery__item-imginner\" style=\"background-image: url(".concat(image.link, ")\"></div></div>\n                <figcaption class=\"gallery__item-caption\">\n                    <h2 class=\"gallery__item-title\" data-scroll data-scroll-speed=\"2\" data-splitting></h2>\n                    <span class=\"gallery__item-number\">").concat(convertNumber(index), "</span>\n                    <p class=\"gallery__item-text\"><a href=\"").concat(image.link, "\" target=\"_blank\"><i class=\"fas fa-cloud-download-alt\"></i>  Download</a></p>\n                    <p class=\"gallery__item-text gallery__item-view\">").concat(image.views, " views</p>\n                </figcaption>\n            </figure>");
       gallery.insertAdjacentHTML('beforeend', element);
     }) : null;
   }).then(function () {
@@ -11076,7 +11076,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52071" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60231" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
