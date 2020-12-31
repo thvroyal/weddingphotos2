@@ -10840,7 +10840,7 @@ var GalleryController = /*#__PURE__*/function () {
         scroll.update();
       }, 'startAnimation') // animate the main title characters out and fade them out too
       .to(this.DOM.titleChars, {
-        duration: 1,
+        duration: 0.5,
         ease: 'expo',
         x: function x(pos, target) {
           return -40 * (Math.floor(_this2.titleCharsTotal / 2) - pos);
@@ -10851,7 +10851,7 @@ var GalleryController = /*#__PURE__*/function () {
         }
       }, 'startAnimation') // the other images in the stack will animate its translation values randomly
       .to(otherImages, {
-        duration: 1,
+        duration: 0.5,
         ease: 'power3',
         x: function x() {
           return '+=' + (0, _utils.getRandomInteger)(-200, 200) + '%';
@@ -10861,7 +10861,7 @@ var GalleryController = /*#__PURE__*/function () {
         },
         opacity: 0,
         rotation: function rotation() {
-          return (0, _utils.getRandomInteger)(-20, 20);
+          return (0, _utils.getRandomInteger)(-60, 90);
         }
       }, 'startAnimation') // and then we make them appear in their final position in the grid
       .to(otherImages, {
@@ -11017,7 +11017,7 @@ function _getPhotos() {
 
 function showPhotos() {
   getPhotos("https://api.imgur.com/3/album/lnyLIDE").then(function (data) {
-    var images = data.data.images; // print node image on HTML
+    var images = data.data.images.slice(0, 10); // print node image on HTML
 
     images ? images.map(function (image, index) {
       var element = "<figure class=\"gallery__item\">\n                <div class=\"gallery__item-img\"><div class=\"gallery__item-imginner\" style=\"background-image: url(".concat(image.link, ")\"></div></div>\n                <figcaption class=\"gallery__item-caption\">\n                    <h2 class=\"gallery__item-title\" data-scroll data-scroll-speed=\"2\" data-splitting></h2>\n                    <span class=\"gallery__item-number\">").concat(convertNumber(index), "</span>\n                    <p class=\"gallery__item-text\"><a href=\"").concat(image.link, "\" target=\"_blank\"><i class=\"fas fa-cloud-download-alt\"></i>  Download</a></p>\n                    <p class=\"gallery__item-text gallery__item-view\">").concat(image.views, " views</p>\n                </figcaption>\n            </figure>");

@@ -76,7 +76,7 @@ export default class GalleryController {
         
         // animate the main title characters out and fade them out too
         .to(this.DOM.titleChars, {
-            duration: 1,
+            duration: 0.5,
             ease: 'expo',
             x: (pos, target) => {
                 return -40*(Math.floor(this.titleCharsTotal/2)-pos);
@@ -87,12 +87,12 @@ export default class GalleryController {
 
         // the other images in the stack will animate its translation values randomly
         .to(otherImages, {
-            duration: 1, 
+            duration: 0.5,
             ease: 'power3',
             x: () => '+='+getRandomInteger(-200,200)+'%',
             y: () => '+='+getRandomInteger(-200,200)+'%',
             opacity: 0,
-            rotation: () => getRandomInteger(-20,20)
+            rotation: () => getRandomInteger(-60,90)
         }, 'startAnimation')
         // and then we make them appear in their final position in the grid
         .to(otherImages, {
