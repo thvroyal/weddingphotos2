@@ -1,18 +1,64 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bằng Nhung Wedding Photos</title>
+    <title>Bằng Nhung Wedding Survey</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="https://use.typekit.net/lty4rfv.css">
-    <link rel="stylesheet" type="text/css" href="css/base.css" />
-    <link rel="stylesheet" type="text/css" href="css/demo1.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/survey.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+          integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+          crossorigin="anonymous"/>
+    <script>document.documentElement.className = "js";
+    var supportsCssVars = function () {
+        var e, t = document.createElement("style");
+        return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+    };
+    supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 </head>
 <body>
-
+<div class="text-header">
+    <h1 class="text-title"><a href="index.html">Bang Nhung's Wedding</a></h1>
+</div>
+<div class="container-fluid">
+    <form>
+        <div class="form__title">
+            <h4>Survey Wedding</h4>
+            <span>Anh/Chị/Bạn dành chút thời gian trả lời 3 câu hỏi dưới giúp chúng mình nha!</span>
+        </div>
+        <div class="form-group">
+            <span>Anh/Chị/Bạn sẽ tham gia tiệc cưới của bọn em/mình chứ 😆</span>
+            <div class="radio-control">
+                <input type="radio" class="form-control" name="question1" value="1" id="sure"/>
+                <label for="sure">Chắc chắn rồi!</label>
+            </div>
+            <div class="radio-control">
+                <input type="radio" class="form-control" name="question1" value="0" id="notsure"/>
+                <label for="notsure">Chưa chắc chắn</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <span>Anh/Chị/Bạn nhớ dẫn thêm người thương đi cùng nha 😆</span>
+            <div class="radio-contorl">
+                <input type="radio" class="form-control" name="question2" value="1" id="okman"/>
+                <label for="okman">OK man</label>
+            </div>
+            <div class="radio-control">
+                <input type="radio" class="form-control" name="question2" value="0" id="waiting"/>
+                <label for="waiting">Đợi tìm người thương đã</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <span>Anh/Chị/Bạn đăng ký hát mấy bài để góp vui cùng bọn em/mình nhé 😆</span>
+            <label for="song"></label><br/>
+            <input type="text" class="form-control" name="question3" id="song"
+                   placeholder="Bài hát tủ của anh/chị/bạn..."/>
+        </div>
+        <button class="btn btn-submit">Gửi</button>
+    </form>
+</div>
 </body>
 </html>
