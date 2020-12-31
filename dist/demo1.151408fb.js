@@ -10807,7 +10807,7 @@ var GalleryController = /*#__PURE__*/function () {
           timeline.set(item.DOM.img, {
             x: winsize.width / 2 - item.imgRect.left - item.imgRect.width / 2,
             y: winsize.height / 2 - item.imgRect.top - item.imgRect.height / 2,
-            scale: 0.6,
+            scale: 0.9,
             rotation: (0, _utils.getRandomInteger)(-10, 10),
             opacity: 1,
             delay: 0.2 * pos
@@ -11076,7 +11076,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60231" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54957" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

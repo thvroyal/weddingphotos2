@@ -48,7 +48,7 @@ export default class GalleryController {
             timeline.set(item.DOM.img, {
                 x: winsize.width/2 - item.imgRect.left - item.imgRect.width/2,
                 y:  winsize.height/2 - item.imgRect.top - item.imgRect.height/2,
-                scale: 0.6,
+                scale: 0.9,
                 rotation: getRandomInteger(-10,10),
                 opacity: 1,
                 delay: 0.2*pos
