@@ -10,14 +10,14 @@
 
 body {
 	margin: 0;
-	--color-text: #f8f6f3;
-	--color-bg: #0c0c0c;
-	--color-link: #7d6350;
-	--color-link-hover: #f8f6f3;
+	--color-text: #df7861;
+	--color-bg: #fcf8e8;
+	--color-link: #222831;
+	--color-link-hover: #19456b;
 	color: var(--color-text);
 	background-color: var(--color-bg);
 	--cursor-stroke: none;
-	--cursor-fill: #c5681c;
+	--cursor-fill: #ecb390;
 	--cursor-stroke-width: 1px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -304,3 +304,13 @@ html.has-scroll-dragging {
 	bottom: 0;
 }
 
+.button {
+	background-color: var(--color-link-hover);
+	padding: 7px 15px;
+	border-radius: 8px;
+	color: var(--color-bg);
+}
+.button:hover {
+	color: var(--color-link-hover);
+	background-color: var(--color-text);
+}
