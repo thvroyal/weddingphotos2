@@ -57,7 +57,7 @@ body {
 .qs_ans .ans {
     display: flex;
     flex-direction: column;
-    opacity: .7;
+    opacity: .45;
     align-items: center;
     cursor: pointer;
 }
@@ -78,7 +78,7 @@ body {
     background-color: transparent;
     border-bottom: #df7861 solid 1px;
     padding: 7px 5px;
-    font-size: 1rem;
+    font-size: 1.4rem;
 }
 
 .qs_card input[type="text"]:focus {
@@ -112,6 +112,11 @@ body {
     font-size: 1.1rem;
     color: #3d3939;
     margin-bottom: 50px;
+}
+
+.qs_ask span {
+    color: #cc3919;
+    font-weight: bold;
 }
 
 /*# sourceMappingURL=/survey.145ee78d.css.map */

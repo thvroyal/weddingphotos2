@@ -60,5 +60,6 @@ function showPhotos() {
 }
 
 window.onload = function () {
+    if (window.localStorage.getItem('fun8232') !== '102') window.location.replace('/form-question.html'); else
     showPhotos();
 }

@@ -11046,7 +11046,7 @@ function showPhotos() {
 }
 
 window.onload = function () {
-  showPhotos();
+  if (window.localStorage.getItem('fun8232') !== '102') window.location.replace('/form-question.html');else showPhotos();
 };
 },{"../utils":"js/utils.js","../cursor":"js/cursor.js","regenerator-runtime/runtime":"../node_modules/regenerator-runtime/runtime.js","./galleryController":"js/demo1/galleryController.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -11076,7 +11076,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49975" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55333" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
