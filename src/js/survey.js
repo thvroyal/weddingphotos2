@@ -267,7 +267,7 @@ function renderThanks() {
 }
 async function writeOnSheet(data) {
     try {
-        const response = await fetch('https://v1.nocodeapi.com/thvroyal/google_sheets/WnqHVCSIJNllOIdi?tabId=Sheet1', {
+        const response = await fetch(`https://v1.nocodeapi.com/thvroyal/google_sheets/WnqHVCSIJNllOIdi?tabId=Sheet1`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"

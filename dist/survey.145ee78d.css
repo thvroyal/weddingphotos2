@@ -42,6 +42,10 @@ body {
     color: #cc3919;
 }
 
+.qs_title h2 {
+    text-align: center;
+}
+
 .qs_ask {
     font-size: 1.1rem;
     color: #131212;
