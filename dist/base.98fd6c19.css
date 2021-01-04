@@ -313,6 +313,10 @@ html.has-scroll-dragging {
 	font-size: .9rem;
 	font-weight: 400;
 }
+.button:focus {
+	color: var(--color-bg);
+}
+
 .button:hover {
 	color: var(--color-link-hover);
 	background-color: var(--color-text);
