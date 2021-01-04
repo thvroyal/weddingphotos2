@@ -11046,7 +11046,7 @@ function showPhotos() {
 }
 
 window.onload = function () {
-  if (window.localStorage.getItem('fun8232') !== '102') window.location.replace('/form-question.html');else showPhotos();
+  if (window.localStorage.getItem('fun8232') !== '102') window.location.replace('form-question.html');else showPhotos();
 };
 },{"../utils":"js/utils.js","../cursor":"js/cursor.js","regenerator-runtime/runtime":"../node_modules/regenerator-runtime/runtime.js","./galleryController":"js/demo1/galleryController.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
