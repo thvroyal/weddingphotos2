@@ -10768,7 +10768,7 @@ var GalleryController = /*#__PURE__*/function () {
     };
     this.DOM.titleChars = this.DOM.title.querySelectorAll('.char');
     this.titleCharsTotal = this.DOM.titleChars.length;
-    this.DOM.galleryItemElems = _toConsumableArray(this.DOM.galleryEl.querySelectorAll('.gallery__item')).slice(0, 7);
+    this.DOM.galleryItemElems = _toConsumableArray(this.DOM.galleryEl.querySelectorAll('.gallery__item'));
     this.galleryItems = [];
     this.DOM.galleryItemElems.forEach(function (el) {
       return _this.galleryItems.push(new _galleryItem.default(el));
@@ -10795,7 +10795,7 @@ var GalleryController = /*#__PURE__*/function () {
       }, 0); // now let's center the images (stack)
 
 
-      var _iterator = _createForOfIteratorHelper(this.galleryItems.entries()),
+      var _iterator = _createForOfIteratorHelper(this.galleryItems.slice(0, 7).entries()),
           _step;
 
       try {

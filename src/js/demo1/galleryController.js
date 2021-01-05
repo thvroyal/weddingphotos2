@@ -25,7 +25,7 @@ export default class GalleryController {
         };
         this.DOM.titleChars = this.DOM.title.querySelectorAll('.char');
         this.titleCharsTotal = this.DOM.titleChars.length;
-        this.DOM.galleryItemElems = [...this.DOM.galleryEl.querySelectorAll('.gallery__item')].slice(0,7);
+        this.DOM.galleryItemElems = [...this.DOM.galleryEl.querySelectorAll('.gallery__item')];
         this.galleryItems = [];
         this.DOM.galleryItemElems.forEach(el => this.galleryItems.push(new GalleryItem(el)));
         this.itemsTotal = this.galleryItems.length;
@@ -44,7 +44,7 @@ export default class GalleryController {
         }, 0);
 
         // now let's center the images (stack)
-        for (const [pos, item] of this.galleryItems.entries()) {
+        for (const [pos, item] of this.galleryItems.slice(0,7).entries()) {
             timeline.set(item.DOM.img, {
                 x: winsize.width/2 - item.imgRect.left - item.imgRect.width/2,
                 y:  winsize.height/2 - item.imgRect.top - item.imgRect.height/2,
