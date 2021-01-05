@@ -26,6 +26,7 @@
     "infinite-scroll": "^4.0.0-beta.0",
     "locomotive-scroll": "^4.0.4",
     "parcel-bundler": "^1.12.4",
-    "splitting": "^1.0.6"
+    "splitting": "^1.0.6",
+    "vanilla-lazyload": "^17.3.0"
   }
 }

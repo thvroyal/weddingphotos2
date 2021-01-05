@@ -2,6 +2,7 @@ import {preloadImages, preloadFonts} from '../utils';
 import Cursor from '../cursor';
 import 'regenerator-runtime/runtime'
 import GalleryController from './galleryController';
+import LazyLoad from "vanilla-lazyload";
 
 const gallery = document.getElementById("showGallery");
 
@@ -27,7 +28,7 @@ function showPhotos() {
             // print node image on HTML
             images ? images.map((image, index) => {
                 let element = `<figure class="gallery__item">
-                <div class="gallery__item-img"><div class="gallery__item-imginner" style="background-image: url(${image.link})"></div></div>
+                <div class="gallery__item-img"><div class="gallery__item-imginner lazy"  data-bg="${image.link}"></div></div>
                 <figcaption class="gallery__item-caption">
                     <h2 class="gallery__item-title" data-scroll data-scroll-speed="2" data-splitting></h2>
                     <span class="gallery__item-number">${convertNumber(index)}</span>
@@ -43,7 +44,8 @@ function showPhotos() {
             Promise.all([preloadImages('.gallery__item-imginner'), preloadFonts('lty4rfv')]).then(() => {
                 // Remove loader (loading class)
                 document.body.classList.remove('loading');
-
+                // Initialize lazy load
+                const LL = new LazyLoad({});
                 // Initialize custom cursor
                 const cursor = new Cursor(document.querySelector('.cursor'));
 
