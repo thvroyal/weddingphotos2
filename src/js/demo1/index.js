@@ -23,7 +23,7 @@ async function getPhotos(url) {
 function showPhotos() {
     getPhotos(`https://api.imgur.com/3/album/lnyLIDE`)
         .then(data => {
-            const images = data.data.images.slice(0,10);
+            const images = data.data.images;
             // print node image on HTML
             images ? images.map((image, index) => {
                 let element = `<figure class="gallery__item">

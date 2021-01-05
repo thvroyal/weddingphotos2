@@ -25,7 +25,7 @@ export default class GalleryController {
         };
         this.DOM.titleChars = this.DOM.title.querySelectorAll('.char');
         this.titleCharsTotal = this.DOM.titleChars.length;
-        this.DOM.galleryItemElems = [...this.DOM.galleryEl.querySelectorAll('.gallery__item')];
+        this.DOM.galleryItemElems = [...this.DOM.galleryEl.querySelectorAll('.gallery__item')].slice(0,7);
         this.galleryItems = [];
         this.DOM.galleryItemElems.forEach(el => this.galleryItems.push(new GalleryItem(el)));
         this.itemsTotal = this.galleryItems.length;
@@ -49,7 +49,7 @@ export default class GalleryController {
                 x: winsize.width/2 - item.imgRect.left - item.imgRect.width/2,
                 y:  winsize.height/2 - item.imgRect.top - item.imgRect.height/2,
                 scale: 0.9,
-                rotation: getRandomInteger(-10,10),
+                rotation: getRandomInteger(-25,20),
                 opacity: 1,
                 delay: 0.2*pos
             }, 0);

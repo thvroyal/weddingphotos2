@@ -10768,7 +10768,7 @@ var GalleryController = /*#__PURE__*/function () {
     };
     this.DOM.titleChars = this.DOM.title.querySelectorAll('.char');
     this.titleCharsTotal = this.DOM.titleChars.length;
-    this.DOM.galleryItemElems = _toConsumableArray(this.DOM.galleryEl.querySelectorAll('.gallery__item'));
+    this.DOM.galleryItemElems = _toConsumableArray(this.DOM.galleryEl.querySelectorAll('.gallery__item')).slice(0, 7);
     this.galleryItems = [];
     this.DOM.galleryItemElems.forEach(function (el) {
       return _this.galleryItems.push(new _galleryItem.default(el));
@@ -10808,7 +10808,7 @@ var GalleryController = /*#__PURE__*/function () {
             x: winsize.width / 2 - item.imgRect.left - item.imgRect.width / 2,
             y: winsize.height / 2 - item.imgRect.top - item.imgRect.height / 2,
             scale: 0.9,
-            rotation: (0, _utils.getRandomInteger)(-10, 10),
+            rotation: (0, _utils.getRandomInteger)(-25, 20),
             opacity: 1,
             delay: 0.2 * pos
           }, 0); // for the first image, we set a high scale for the inner image element
@@ -11017,7 +11017,7 @@ function _getPhotos() {
 
 function showPhotos() {
   getPhotos("https://api.imgur.com/3/album/lnyLIDE").then(function (data) {
-    var images = data.data.images.slice(0, 10); // print node image on HTML
+    var images = data.data.images; // print node image on HTML
 
     images ? images.map(function (image, index) {
       var element = "<figure class=\"gallery__item\">\n                <div class=\"gallery__item-img\"><div class=\"gallery__item-imginner\" style=\"background-image: url(".concat(image.link, ")\"></div></div>\n                <figcaption class=\"gallery__item-caption\">\n                    <h2 class=\"gallery__item-title\" data-scroll data-scroll-speed=\"2\" data-splitting></h2>\n                    <span class=\"gallery__item-number\">").concat(convertNumber(index), "</span>\n                    <p class=\"gallery__item-text\"><a href=\"").concat(image.link, "\" target=\"_blank\"><i class=\"fas fa-cloud-download-alt\"></i>  Download</a></p>\n                    <p class=\"gallery__item-text gallery__item-view\">").concat(image.views, " views</p>\n                </figcaption>\n            </figure>");
@@ -11076,7 +11076,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50648" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50802" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

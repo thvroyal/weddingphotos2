@@ -262,7 +262,7 @@ function renderThanks() {
             <div class="qs_title"><h2>Thank you</h2></div>
             <span>Cảm ơn anh/ chị/ bạn đã dành thời gian trả lời câu hỏi của chúng mình, rất mong sẽ thấy sự xuất hiện của anh/chị/bạn trong ngày trọng đại này.<br/><br/><br/>
                 Tiếp tục xem ảnh cưới của chúng mình ở dưới nhé !</span>
-            <a href="../index.html"><button class="qs_btn" type="button">Tiếp tục xem ảnh</button></a>
+            <a href="../index.html"><button class="qs_btn" type="button">Xem ảnh cưới nha</button></a>
         </div>`);
 }
 async function writeOnSheet(data) {
