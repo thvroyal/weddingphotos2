@@ -312,9 +312,13 @@ html.has-scroll-dragging {
 	font-family: Roboto, sans-serif;
 	font-size: .9rem;
 	font-weight: 400;
+	border: none;
+	cursor: pointer;
+	margin-top: 15px;
 }
 .button:focus {
 	color: var(--color-bg);
+	outline: none;
 }
 
 .button:hover {
