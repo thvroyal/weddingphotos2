@@ -10807,7 +10807,7 @@ var GalleryController = /*#__PURE__*/function () {
           timeline.set(item.DOM.img, {
             x: winsize.width / 2 - item.imgRect.left - item.imgRect.width / 2,
             y: winsize.height / 2 - item.imgRect.top - item.imgRect.height / 2,
-            scale: 0.9,
+            scale: 0.8,
             rotation: (0, _utils.getRandomInteger)(-25, 20),
             opacity: 1,
             delay: 0.2 * pos
