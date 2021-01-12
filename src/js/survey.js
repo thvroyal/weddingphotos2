@@ -239,7 +239,7 @@ function renderQuestion() {
             <label for="question4"></label>
             <input type="text" id="question4"/>
         </div>
-        <button class="qs_btn" type="button" onclick="sendSubmit()">Send with your love</button>`);
+        <button class="qs_btn" id="btnData" type="button" onclick="sendSubmit()">Send with your love</button>`);
 }
 //render thank you card if they done
 function renderThanks() {
@@ -284,11 +284,12 @@ window.sendSubmit = function() {
     dataQuestion.name = document.getElementById('question1').value;
     dataQuestion.songs = document.getElementById('question4').value;
     const data = [[dataQuestion.name, dataQuestion.isJoin, dataQuestion.withLover, dataQuestion.songs]];
-    console.log(data);
+    document.getElementById('btnData').setAttribute('disabled','true');
     writeOnSheet(data)
         .then((res) => {
-            console.log('res', res.data);
+            // console.log('res', res.data);
             window.localStorage.setItem('fun8232','102');
+            document.getElementById('btnData').setAttribute('disabled','false');
             render();
         })
         .catch(err => {
